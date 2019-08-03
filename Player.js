@@ -46,7 +46,6 @@ function convertTime(secs) {
     return (min + ":" + sec)
 }
 function showDuration() {
-
     var d = Math.floor(song.duration);
     songSlider.setAttribute("max", d);
     duration.textContent = convertTime(d);
@@ -74,18 +73,15 @@ function previous() {
     currentSong--;
     currentSong = (currentSong < 0) ? songs.length - 1 : currentSong;
     loadSong();
-
 }
 
 
 function seekSong() {
-
     song.currentTime = songSlider.value;
     currentTime.textContent = convertTime(song.currentTime);
 }
 
 function adjustVolume() {
-
     song.volume = volumeSlider.value;
 }
 
